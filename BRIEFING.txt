@@ -1,0 +1,30 @@
+Entrega TCC 
+A 1ª entrega é composta por:
+✓ Apresentação em PowerPoint, elaborada segundo o template oficial do LABDATA FIA, contendo:
+• Capa e folha de apresentação
+• Agenda
+• Objetivo do trabalho
+• Contextualização do problema
+• Descrição da base de dados (fonte, visão, filtros, períodos)
+• Fluxo de volume de dados após cada filtro, se aplicável
+• Descrição das variáveis da base de dados
+
+
+Modelo de regressão linear
+Modelo de regressão logística
+Análise de cluster: Método hierárquico
+Análise de cluster: K-médias
+DBSCAN
+Análise de cluster: K-medoides
+Árvore de Decisão
+Random Forest
+Gradient Boosting Tree
+XGBoost, LightGBM, CatBoost
+
+Conteúdo requerido:
+• Quantidade geral de registros da base de dados.
+• Tabelas de frequências absolutas/relativas para variáveis qualitativas.
+• Medidas resumo (posição e dispersão), gráficos de histograma e/ou boxplot para variáveis quantitativas.
+• Comentários acerca dos insights obtidos para todas as tabelas e gráficos.
+
+preciso desses topicos
