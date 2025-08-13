@@ -9,11 +9,12 @@ base_url = "https://dadosabertos.ans.gov.br/FTP/PDA/informacoes_consolidadas_de_
 # Pasta para salvar os arquivos
 os.makedirs("downloads_ans", exist_ok=True)
 
+#TESTE
 # Loop de ano/mês de 202001 a 202504
 for ano in range(2025, 2026):
     for mes in range(1, 13):
         pasta = f"{ano}{mes:02d}"
-        if pasta > "202504":
+        if pasta > "202506":
             break  # Parar o loop após o mês final
         url_completa = urljoin(base_url, pasta + "/")
         print(f"\n📂 Acessando: {url_completa}")
