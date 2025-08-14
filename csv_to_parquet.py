@@ -19,3 +19,4 @@ for arquivo in os.listdir(pasta_csv):
             df.to_parquet(caminho_parquet, index=False)  # usa pyarrow ou fastparquet
         except Exception as e:
             print(f'Erro ao converter {arquivo}: {e}')
+#teste
