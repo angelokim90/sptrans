@@ -10,7 +10,7 @@ The objectives of this pipeline are to:
 - Apply transformations for data cleaning and standardization.
 - Provide data ready for analysis and visualization in Power BI dashboards.
 
-## DataEnvironment Note
+## Data Environment Note
 All software used in this pipeline (Python, Kafka, NiFi, MinIO, PostgreSQL, PySpark) was run via Docker, ensuring portability, consistency, and ease of environment versioning.
 Power BI was used outside of Docker due to the need for version control and dashboard management, which depend on the Windows/GUI environment.
 
@@ -25,6 +25,10 @@ Power BI was used outside of Docker due to the need for version control and dash
 - **Frequency:** Data is continuously updated by the API and consumed by the pipeline every 10 minutes.
 - **Authentication:** The API requires an access key (token), which must be configured in the collection script.
 - **Link:** [SPTrans Developers](https://www.sptrans.com.br/desenvolvedores/)
+
+## Educational Exceptions
+- **Trusted layer**: stored in Parquet and flat files *for educational purposes only and for easier readability*.
+- **Bronze layer**: stored in PostgreSQL *solely for didactic visualization purposes*.
 
 ## Architecture
 
@@ -57,3 +61,8 @@ Power BI was used outside of Docker due to the need for version control and dash
 5. **Visualization**
    - **Technology:** Power BI
    - **Description:** Dashboards for monitoring buses, delays, and the busiest lines in São Paulo.
+
+6. **Data Architecture**
+   - **Diagram:**
+     
+![pipeline (2)](https://github.com/user-attachments/assets/c89b1be0-bdd0-4d29-8fca-98f15c5bd816)
