@@ -1,6 +1,25 @@
 # Pipeline de Dados - SPTrans Olho Vivo
 
-Esta pipeline coleta, processa e disponibiliza dados da API SPTrans Olho Vivo para análise em Power BI, utilizando tecnologias de streaming, processamento distribuído e banco de dados em camadas.
+## Introdução
+Esta pipeline foi desenvolvida para coletar, processar e disponibilizar dados de transporte público em tempo real da cidade de São Paulo. O foco é transformar dados brutos da API SPTrans Olho Vivo em informações prontas para análise, apoiando a tomada de decisão em mobilidade urbana.
+
+## Objetivo
+O objetivo desta pipeline é:
+- Automatizar a coleta de dados de ônibus em tempo real.
+- Garantir armazenamento confiável e durável dos dados.
+- Aplicar transformações para limpeza e padronização.
+- Disponibilizar dados prontos para análise e visualização em dashboards no Power BI.
+
+## Fonte de Dados: API SPTrans Olho Vivo
+- **Descrição:** A API Olho Vivo fornece informações em tempo real sobre localização, linhas e itinerários de ônibus municipais de São Paulo.
+- **Formato:** JSON
+- **Principais informações fornecidas:**
+  - Identificação do veículo e linha
+  - Localização (latitude e longitude)
+  - Linhas, origens e destinos
+  - Horário da última atualização
+- **Periodicidade:** Dados atualizados constantemente pela API, consumidos pela pipeline a cada 10 minutos.  
+- **Autenticação:** A API requer chave de acesso (token), que deve ser configurada no script de coleta.
 
 ## Arquitetura
 
