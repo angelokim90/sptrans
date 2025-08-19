@@ -1,51 +1,36 @@
-# sptrans
-Pipeline: api sptrans olho vivo, kafka,nifi, minio, pyspark, postgres, power bi
+# Pipeline de Dados - SPTrans Olho Vivo
 
+Esta pipeline coleta, processa e disponibiliza dados da API SPTrans Olho Vivo para análise em Power BI, utilizando tecnologias de streaming, processamento distribuído e banco de dados em camadas.
 
-**Arquitetura**
-**1. Coleta de Dados**
+## Arquitetura
 
-Fonte: API SPTrans Olho Vivo
+1. **Coleta de Dados**
+   - **Fonte:** API SPTrans Olho Vivo
+   - **Tecnologia:** Python
+   - **Descrição:** Dados de transporte público em tempo real são consumidos periodicamente via requisições HTTP (ex.: a cada 30 segundos).
 
-Tecnologia: Python
+2. **Transmissão e Armazenamento Temporário**
+   - **Tecnologia:** Kafka + NiFi + MinIO
+   - **Descrição:**
+     - Dados enviados para tópicos Kafka.
+     - NiFi consome dados do Kafka e grava arquivos no MinIO (formato JSON), garantindo durabilidade.
+     - Logs de ingestão são registrados para monitoramento de processamento e falhas.
 
-Descrição: Dados de transporte público em tempo real são consumidos periodicamente via requisições HTTP à API.
+3. **Processamento e Transformação**
+   - **Tecnologia:** PySpark (Jupyter Notebook)
+   - **Descrição:**
+     - Leitura de arquivos do MinIO.
+     - Transformações: limpeza, padronização de campos, tratamento de timestamps e agregações parciais.
+     - Logs de ingestão são registrados para monitoramento de processamento e falhas.
 
-**2. Transmissão e Armazenamento Temporário**
+4. **Armazenamento em Camadas (Medalhão)**
+   - **Tecnologia:** PostgreSQL
+   - **Camadas:**
+     - **Bronze:** Dados crus, como recebidos da API.
+     - **Silver:** Dados limpos e tipagem de dados.
+     - **Gold:** Padronização dos nomes técnicos para business name e campos calculados.
 
-Tecnologia: Kafka + NiFi + MinIO
-
-Descrição:
-
-Os dados recebidos da API são enviados para tópicos Kafka.
-
-NiFi consome os dados do Kafka e armazena arquivos no MinIO, garantindo persistência e durabilidade.
-
-**3. Processamento e Transformação**
-
-Tecnologia: PySpark (Jupyter Notebook)
-
-Descrição:
-
-Os arquivos armazenados no MinIO são lidos via PySpark.
-
-Aplicam-se transformações e limpeza dos dados antes da carga no banco.
-
-**4. Armazenamento em Camadas (Medalhão)**
-
-Tecnologia: PostgreSQL
-
-Descrição:
-
-Bronze: Dados crus, exatamente como foram recebidos da API.
-
-Silver: Dados limpos e padronizados.
-
-Gold: Dados agregados e prontos para análise.
-
-**5. Visualização**
-
-Tecnologia: Power BI
-
-Descrição: Os dados na camada Gold são consumidos para gerar dashboards de monitoramento e análise de transporte público em São Paulo.
+5. **Visualização**
+   - **Tecnologia:** Power BI
+   - **Descrição:** Dashboards para monitoramento de veículos, atrasos e linhas mais movimentadas em São Paulo.
 
