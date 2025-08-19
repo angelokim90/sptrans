@@ -1,2 +1,2 @@
 # sptrans
-Pipeline: api sptrans olho vivo, kafka, minio, pyspark, postgres, power bi
+Pipeline: api sptrans olho vivo, kafka,nifi, minio, pyspark, postgres, power bi
