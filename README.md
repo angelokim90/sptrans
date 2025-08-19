@@ -76,3 +76,6 @@ Power BI was used outside of Docker due to the need for version control and dash
 - **Link:** [PowerBI_SPTRANS](https://app.powerbi.com/view?r=eyJrIjoiOWIxZDAwNjAtOTdhZS00ZDg3LThlNDMtNTFmMTcxY2ZmNGRjIiwidCI6ImY4ODc5ODgyLTNkM2ItNDg2Zi05OTA0LTc0Zjc4YTBlZGQ1MCJ9)
 
 ## Conclusion
+
+- **Conclusion:**
+This SPTrans Olho Vivo Data Pipeline demonstrates a robust approach to collecting, processing, and delivering real-time public transport data for São Paulo. By leveraging a combination of Dockerized services, Kafka streaming, NiFi ingestion, MinIO storage, PySpark processing, and PostgreSQL medallion architecture, the pipeline ensures data reliability, scalability, and readiness for analysis. The integration with Power BI allows city planners, analysts, and decision-makers to visualize key metrics, monitor bus operations, and make informed decisions to improve urban mobility. Additionally, the inclusion of educational exceptions highlights best practices in data management while maintaining clarity and accessibility for learning purposes.
