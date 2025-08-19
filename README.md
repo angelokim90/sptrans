@@ -37,7 +37,7 @@ Power BI was used outside of Docker due to the need for version control and dash
    - **Technology:** Python
    - **Description:** Real-time public transport data is periodically consumed via HTTP requests (e.g., every 30 seconds).
 
-2. **Transmission and Temporary Storage**
+2. **Transmission and Storage**
    - **Technology:** Kafka + NiFi + MinIO
    - **Description:**
      - Data is sent to Kafka topics.
@@ -51,7 +51,7 @@ Power BI was used outside of Docker due to the need for version control and dash
      - Transformations: cleaning, field standardization, timestamp handling, and partial aggregations.
      - Ingestion logs are recorded to monitor processing and failures.
 
-4. **Layered Storage (Medallion Architecture)**
+4. **Service Storage (Medallion Architecture)**
    - **Technology:** PostgreSQL
    - **Layers:**
      - **Bronze:** Raw data as received from the API.
