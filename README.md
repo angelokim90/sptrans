@@ -20,6 +20,7 @@ O objetivo desta pipeline é:
   - Horário da última atualização
 - **Periodicidade:** Dados atualizados constantemente pela API, consumidos pela pipeline a cada 10 minutos.  
 - **Autenticação:** A API requer chave de acesso (token), que deve ser configurada no script de coleta.
+- **Link:** https://www.sptrans.com.br/desenvolvedores/
 
 ## Arquitetura
 
