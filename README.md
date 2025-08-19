@@ -10,6 +10,10 @@ The objectives of this pipeline are to:
 - Apply transformations for data cleaning and standardization.
 - Provide data ready for analysis and visualization in Power BI dashboards.
 
+## DataEnvironment Note
+All software used in this pipeline (Python, Kafka, NiFi, MinIO, PostgreSQL, PySpark) was run via Docker, ensuring portability, consistency, and ease of environment versioning.
+Power BI was used outside of Docker due to the need for version control and dashboard management, which depend on the Windows/GUI environment.
+
 ## Data Source: SPTrans Olho Vivo API
 - **Description:** The Olho Vivo API provides real-time information on the location, routes, and itineraries of São Paulo municipal buses.
 - **Format:** JSON
