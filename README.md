@@ -66,3 +66,13 @@ Power BI was used outside of Docker due to the need for version control and dash
    - **Diagram:**
      
 ![pipeline (2)](https://github.com/user-attachments/assets/c89b1be0-bdd0-4d29-8fca-98f15c5bd816)
+
+
+
+## Dashboard Power BI
+- **Dashboard:**
+<img width="1433" height="807" alt="image" src="https://github.com/user-attachments/assets/cf536b08-73e3-45a1-a6ac-c2843e2ef995" />
+
+- **Link:** [PowerBI_SPTRANS](https://app.powerbi.com/view?r=eyJrIjoiOWIxZDAwNjAtOTdhZS00ZDg3LThlNDMtNTFmMTcxY2ZmNGRjIiwidCI6ImY4ODc5ODgyLTNkM2ItNDg2Zi05OTA0LTc0Zjc4YTBlZGQ1MCJ9)
+
+## Conclusion
