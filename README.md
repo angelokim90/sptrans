@@ -43,12 +43,16 @@ Power BI was used outside of Docker due to the need for version control and dash
      - Data is sent to Kafka topics.
      - NiFi consumes data from Kafka and writes files to MinIO (JSON format), ensuring durability.
      - Ingestion logs are recorded to monitor processing and failures.
+  
+   - **Consuming data with Kafka:** <img width="854" height="727" alt="image" src="https://github.com/user-attachments/assets/dc4b4728-fd5a-4765-a34e-bf1e9a7935e8" />
+   - **Nifi Pipeline:** <img width="1357" height="861" alt="image" src="https://github.com/user-attachments/assets/afe5effb-9583-4df3-9e0b-fb88deee1793" />
+   - **Minio Raw Stage:** <img width="1909" height="575" alt="image" src="https://github.com/user-attachments/assets/c9f5954f-b372-4fd9-9b36-608729566cb8" />
 
 3. **Processing and Transformation**
    - **Technology:** PySpark (Jupyter Notebook)
    - **Description:**
      - Reads files from MinIO.
-     - Transformations: cleaning, field standardization, timestamp handling, and partial aggregations.
+     - Transformations: cleaning, field standardization, timestamp handling.
      - Ingestion logs are recorded to monitor processing and failures.
 
 4. **Service Storage (Medallion Architecture)**
@@ -57,6 +61,8 @@ Power BI was used outside of Docker due to the need for version control and dash
      - **Bronze:** Raw data as received from the API.
      - **Silver:** Cleaned data with proper data types.
      - **Gold:** Standardized technical names to business-friendly names and calculated fields.
+   - Postgre Schemas:
+   <img width="354" height="413" alt="image" src="https://github.com/user-attachments/assets/a7f1b3d7-6a13-4762-ba97-a8e03d5ef605" />
 
 5. **Visualization**
    - **Technology:** Power BI
@@ -67,11 +73,10 @@ Power BI was used outside of Docker due to the need for version control and dash
      
 ![pipeline (2)](https://github.com/user-attachments/assets/c89b1be0-bdd0-4d29-8fca-98f15c5bd816)
 
-
-
 ## Dashboard Power BI
 - **Dashboard:**
 <img width="1433" height="807" alt="image" src="https://github.com/user-attachments/assets/cf536b08-73e3-45a1-a6ac-c2843e2ef995" />
+
 
 - **Link:** [PowerBI_SPTRANS](https://app.powerbi.com/view?r=eyJrIjoiOWIxZDAwNjAtOTdhZS00ZDg3LThlNDMtNTFmMTcxY2ZmNGRjIiwidCI6ImY4ODc5ODgyLTNkM2ItNDg2Zi05OTA0LTc0Zjc4YTBlZGQ1MCJ9)
 
